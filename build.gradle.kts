@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.jazzathoth"
-version = "1.0-SNAPSHOT"
+version = "0.1.0"
 
 repositories {
     mavenCentral()
@@ -29,14 +29,22 @@ dependencies {
 
 intellijPlatform {
     pluginConfiguration {
+        id = "com.jazzathoth.project-tree-plugin"
+        name = "Project Tree"
+        version = project.version.toString()
+        description = "Custom Project View with manual reordering and persistance via JSON"
+        changeNotes = "Alpha: context menu, drag and drop reorder, file system auto refresh with vfs"
+
         ideaVersion {
-            sinceBuild = "252"
+            sinceBuild = "242"
         }
 
-        changeNotes = """
-            Initial version
-        """.trimIndent()
+        vendor {
+            name = "jazzathoth"
+            email = "38414120+jazzathoth@users.noreply.github.com"
+        }
     }
+
 }
 
 tasks {

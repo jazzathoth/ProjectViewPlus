@@ -26,7 +26,6 @@ class PTFileService(private val project: Project) {
         val vf = LocalFileSystem.getInstance()
             .findFileByPath(Path.of(base, filename).toString())
         if (vf != null && vf.exists()) {
-            println("json file exists")
             vf.inputStream.use { ins ->
                 BufferedReader(InputStreamReader(ins, StandardCharsets.UTF_8)).use {
                     val text = it.readText()

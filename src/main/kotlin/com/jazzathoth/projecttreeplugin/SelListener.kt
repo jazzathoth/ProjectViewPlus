@@ -19,7 +19,7 @@ fun setSelListener(tree: PTView, project: Project) {
             is PTNode.Root -> node.vf
         }
 
-        if (!vf.isValid) {println("[setSelListener] got invalid virtualfile: ${vf.name}"); tree.psiFilePtr = null; tree.psiDirPtr = null; return@addTreeSelectionListener}
+        if (!vf.isValid) { tree.psiFilePtr = null; tree.psiDirPtr = null; return@addTreeSelectionListener}
 
         ReadAction.nonBlocking<Pair<SmartPsiElementPointer<PsiDirectory>?, SmartPsiElementPointer<PsiFile>?>> {
             val psiMgr = PsiManager.getInstance(project)
