@@ -1,0 +1,15 @@
+<idea-plugin>
+    <id>com.jazzathoth.project-treee-plugin</id>
+    <name>Project Tree</name>
+    <vendor url="http://notaurl.com">jazzathoth</vendor>
+    <description><![CDATA[
+        ########################################## No Description ##########################################
+    ]]></description>
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow factoryClass="com.jazzathoth.projecttreeplugin.PTToolWindowFactory"
+                    id="Project Tree"
+                    anchor="left"
+                    canCloseContents="false"/>
+    </extensions>
+</idea-plugin>
